@@ -1,0 +1,142 @@
+:root {
+  color-scheme: light;
+  --bg: #fff7fa;
+  --card: #ffffff;
+  --accent: #c13072;
+  --accent-soft: #f7dbe8;
+  --text: #292129;
+  --muted: #6e5a66;
+  --danger: #be2f3d;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top right, #ffe8f2, var(--bg));
+  color: var(--text);
+}
+
+.container {
+  width: min(860px, 92vw);
+  margin: 2rem auto;
+  display: grid;
+  gap: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2rem;
+}
+
+.subtitle {
+  margin-top: 0.35rem;
+  color: var(--muted);
+}
+
+.card {
+  background: var(--card);
+  border-radius: 16px;
+  padding: 1.25rem;
+  border: 1px solid #f3e1e9;
+  box-shadow: 0 12px 28px rgba(92, 39, 74, 0.08);
+}
+
+.grid-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.9rem;
+}
+
+label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+input,
+select,
+button {
+  border: 1px solid #e9d1dc;
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.95rem;
+}
+
+button {
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  border: none;
+  align-self: end;
+}
+
+button:hover {
+  filter: brightness(0.95);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.8rem;
+}
+
+.stat {
+  background: var(--accent-soft);
+  border-radius: 12px;
+  padding: 0.8rem;
+}
+
+.stat span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.stat strong {
+  font-size: 1.15rem;
+}
+
+.history-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.history-list {
+  list-style: none;
+  margin: 0.8rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 10px;
+  background: #fff9fc;
+  border: 1px solid #f3e1e9;
+}
+
+.history-item p {
+  margin: 0.3rem 0 0;
+  color: var(--muted);
+  font-size: 0.87rem;
+}
+
+.delete,
+.danger {
+  background: var(--danger);
+}
+
+.empty {
+  color: var(--muted);
+  font-style: italic;
+}
