@@ -1,24 +1,37 @@
 # Ovula
 
-A lightweight browser-based menstruation tracking app.
+Ovula is a privacy-first menstrual cycle tracking MVP built with React + Vite, Tailwind CSS, and Chart.js.
 
 ## Features
 
-- Log period start/end date, flow intensity, and symptoms.
-- View historical entries.
-- Automatic cycle insights:
-  - Average cycle length
-  - Average period length
-  - Predicted next period date
-  - Most common symptoms
-- Data is stored locally in your browser (`localStorage`).
+- Onboarding profile saved locally in `ovula_user_profile`.
+- Dashboard with:
+  - Predicted next period countdown
+  - Ovulation date and fertile window
+  - Cycle health score badge
+  - PCOS irregularity alert trigger
+  - Line chart of last six cycle lengths
+- Cycle logging saved locally in `ovula_cycle_logs`.
+- Settings page with one-click data wipe.
+- No backend, no auth, and no external APIs.
+
+## Tech stack
+
+- React (Vite)
+- Tailwind CSS
+- Chart.js (`react-chartjs-2`)
+- React Router
+- LocalStorage persistence
 
 ## Run locally
 
-Open `index.html` directly, or serve the folder:
-
 ```bash
-python3 -m http.server 4173
+npm install
+npm run dev
 ```
 
-Then visit <http://localhost:4173>.
+## Build
+
+```bash
+npm run build
+```
