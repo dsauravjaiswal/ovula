@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ovula | Menstruation Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Ovula</h1>
+        <p class="subtitle">Simple menstruation and cycle tracking</p>
+      </header>
+
+      <section class="card">
+        <h2>Log period</h2>
+        <form id="period-form" class="grid-form">
+          <label>
+            Start date
+            <input type="date" id="start-date" required />
+          </label>
+          <label>
+            End date
+            <input type="date" id="end-date" required />
+          </label>
+          <label>
+            Flow intensity
+            <select id="flow" required>
+              <option value="light">Light</option>
+              <option value="medium" selected>Medium</option>
+              <option value="heavy">Heavy</option>
+            </select>
+          </label>
+          <label>
+            Symptoms (comma separated)
+            <input type="text" id="symptoms" placeholder="cramps, fatigue" />
+          </label>
+          <button type="submit">Save entry</button>
+        </form>
+      </section>
+
+      <section class="card stats" id="stats"></section>
+
+      <section class="card">
+        <div class="history-header">
+          <h2>History</h2>
+          <button id="clear-data" class="danger">Clear all</button>
+        </div>
+        <ul id="history" class="history-list"></ul>
+      </section>
+    </main>
+
+    <template id="entry-template">
+      <li class="history-item">
+        <div>
+          <strong class="dates"></strong>
+          <p class="meta"></p>
+        </div>
+        <button class="delete">Delete</button>
+      </li>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
